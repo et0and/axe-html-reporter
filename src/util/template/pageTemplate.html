@@ -78,25 +78,23 @@
             href="https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png"
             sizes="32x32"
         />
-        <title>AXE Accessibility Results</title>
+        <title>Accessibility results {{#projectKey}} for {{projectKey}} {{/projectKey}}</title>
     </head>
     <body>
         <div style="padding: 2rem">
-            <h3>
-                AXE Accessibility Results{{#projectKey}} for {{projectKey}} project{{/projectKey}}
-            </h3>
+            <h1>
+                Accessibility results {{#projectKey}} for {{projectKey}} {{/projectKey}}
+            </h1>
             <div class="summarySection">
                 {{#url}}
                 <div class="summary">
-                    Page URL:
-                    <a href="{{url}}" target="_blank" class="card-link">{{url}}</a>
-                    <br />
+
                 </div>
                 {{/url}} {{#customSummary}}
                 <div class="summary">{{{customSummary}}}</div>
                 {{/customSummary}}
             </div>
-            <h5>{{{violationsSummary}}}</h5>
+            <h2>{{{violationsSummary}}}</h2>
             {{#violationDetails.length}}
             <table class="table table-striped table-bordered">
                 <thead>
@@ -129,9 +127,9 @@
             <div class="card violationCard">
                 <div class="card-body">
                     <div class="violationCardLine">
-                        <h5 class="card-title violationCardTitleItem">
+                        <h2 class="card-title violationCardTitleItem">
                             <a id="{{index}}">{{index}}.</a> {{help}}
-                        </h5>
+                        </h2>
                         <a
                             href="{{helpUrl}}"
                             target="_blank"
@@ -140,23 +138,23 @@
                         >
                     </div>
                     <div class="violationCardLine">
-                        <h6 class="card-subtitle mb-2 text-muted">{{id}}</h6>
-                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                        <h3 class="card-subtitle mb-2 text-muted">{{id}}</h3>
+                        <h3 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             {{wcag}}
-                        </h6>
+                        </h3>
                     </div>
                     <div class="violationCardLine">
                         <p class="card-text">{{description}}</p>
-                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                        <h3 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             {{impact}}
-                        </h6>
+                        </h3>
                     </div>
                     <div class="violationCardLine">
-                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                        <h3 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             Issue Tags: {{#tags}}
                             <span class="badge bg-light text-dark"> {{.}} </span>
                             {{/tags}}
-                        </h6>
+                        </h3>
                     </div>
                     <div class="violationNode">
                         <table class="table table-sm table-bordered">
@@ -206,7 +204,7 @@
             <div id="accordionPasses">
                 <div class="card">
                     <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
+                        <h2 class="mb-0">
                             <button
                                 class="btn btn-link"
                                 data-toggle="collapse"
@@ -218,7 +216,7 @@
                                 checks{{#checksPassed.length}}. Expand details on
                                 click{{/checksPassed.length}}
                             </button>
-                        </h5>
+                        </h2>
                     </div>
                     <div
                         id="passes"
@@ -259,7 +257,7 @@
             <div id="accordionIncomplete">
                 <div class="card">
                     <div class="card-header" id="headingTwo">
-                        <h5 class="mb-0">
+                        <h2 class="mb-0">
                             <button
                                 class="btn btn-link"
                                 data-toggle="collapse"
@@ -270,7 +268,7 @@
                                 axe returned {{checksIncomplete.length}} incomplete checks. Expand
                                 details on click
                             </button>
-                        </h5>
+                        </h2>
                     </div>
                     <div
                         id="incomplete"
@@ -324,7 +322,7 @@
             <div id="accordionInapplicable">
                 <div class="card">
                     <div class="card-header" id="headingThree">
-                        <h5 class="mb-0">
+                        <h2 class="mb-0">
                             <button
                                 class="btn btn-link"
                                 data-toggle="collapse"
@@ -335,7 +333,7 @@
                                 axe returned {{checksInapplicable.length}} inapplicable checks.
                                 Expand details on click
                             </button>
-                        </h5>
+                        </h2>
                     </div>
                     <div
                         id="inapplicable"
@@ -386,7 +384,7 @@
             <div id="rulesSection">
                 <div class="card">
                     <div class="card-header" id="ruleSection">
-                        <h5 class="mb-0">
+                        <h2 class="mb-0">
                             <button
                                 class="btn btn-link"
                                 data-toggle="collapse"
@@ -396,7 +394,7 @@
                             >
                                 axe was running with {{rules.length}} rules. Expand details on click
                             </button>
-                        </h5>
+                        </h2>
                     </div>
                     <div
                         id="rules"

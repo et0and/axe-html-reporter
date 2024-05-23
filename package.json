@@ -1,12 +1,12 @@
 {
-    "name": "axe-html-reporter",
-    "version": "2.2.2",
-    "description": "The module that allows you to create HTML Report from raw accessibility aXe result object",
+    "name": "axe-report-generator",
+    "version": "0.0.1",
+    "description": "The module that allows you to create an HTML report from raw accessibility Axe result object",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "repository": {
         "type": "git",
-        "url": "https://github.com/lpelypenko/axe-html-reporter"
+        "url": "https://github.com/et0and/axe-html-reporter"
     },
     "engines": {
         "node": ">=8.9.0"
@@ -17,7 +17,7 @@
         "test",
         "accessibility"
     ],
-    "author": "Liliia Pelypenko (liliia.pelypenko@gmail.com)",
+    "author": "Tom Hackshaw (tom@tomhackshaw.com)",
     "license": "MIT",
     "files": [
         "dist",
@@ -26,9 +26,9 @@
         "types"
     ],
     "bugs": {
-        "url": "https://github.com/lpelypenko/axe-html-reporter/issues"
+        "url": "https://github.com/et0and/axe-html-reporter/issues"
     },
-    "homepage": "https://github.com/lpelypenko/axe-html-reporter",
+    "homepage": "https://github.com/et0and/axe-html-reporter",
     "scripts": {
         "prebuild": "rimraf dist build",
         "copy": "cp -R ./src/util/template ./dist/util/template",
